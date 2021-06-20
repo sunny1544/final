@@ -1,5 +1,34 @@
 # Final Project README
 ## Build process
+* 後端運用  
+
+  * **`config.ini` 存放**  
+  
+    linebot 的 *Channel_Access_Token*、*Channel_Secret*  
+
+    olami 的 *APP_KEY*、 *APP_SECRET*
+  * **olami 對話訓練**
+  
+    ![image](https://user-images.githubusercontent.com/64915975/122667592-2b0eb700-d1e6-11eb-9546-5c55e2ee9d47.png)
+  * **`girlfriend.py`為主要的main檔**，import `Flask` 、`Linebot`、 `nlp`等 相關套件，讓聊天機器人能運作
+  * **新增 `__init__.py`** 為了讓 `girlfriend.py` import `nlp` 的時候認定 `nlp` 是一個 Module
+  * **新增 `olami.py`** 實作 request OLAMI NLI API 的 method
+  * **將程式部署到Heroku**  
+    * **新增`Procfile`**，告訴Heroku如何啟動這個app
+    * **新增`requirements.txt`**，告訴Heroku這個app的環境需要哪些其他套件
+    * **新增`runtime.txt`**，告訴Heroku這個app指定的python版本
+* 前端顯示、功能測試
+  * **創建Linebot**
+
+    ![image](https://user-images.githubusercontent.com/64915975/122666871-6b6c3600-d1e2-11eb-9706-857602094649.png)
+
+  * **在Line Developer建立Linebot圖文選單**
+
+    ![image](https://user-images.githubusercontent.com/64915975/122667035-4a581500-d1e3-11eb-99f3-91f956c2240e.png)
+    
+  * **對話測試**
+ 
+    ![image](https://user-images.githubusercontent.com/64915975/122668529-0e28b280-d1eb-11eb-99dd-af507aa1c3ff.png)
 ## Introduction
 * 主題發想來源：
 近年來科技大幅進步卻也拉大了人與人之間的距離，生活步調日漸加速，與身邊人相處交心的機會卻也消逝減少；
@@ -13,7 +42,8 @@
   * 利用圖文選單，讓使用者有更簡單的操作。
   * 內涵天氣預報、推薦音樂和電影，讓使用者有更便利的生活。
   * 簡易的小遊戲讓使用者能夠度過無聊的時光。
-
+* 使用流程：
+![image](https://user-images.githubusercontent.com/64915975/122666323-298dc080-d1df-11eb-9a2c-6a5d65eccb1f.png)
 ## Details of the approach
 ## Results
 ## References
